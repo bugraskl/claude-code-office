@@ -8,12 +8,13 @@ Her oturum bir oda. Ana ajan yönetici masasında oturuyor, her alt ajanın kend
 Kim yazıyor, kim düşünüyor, kim seni bekliyor, kim takıldı; terminalleri karıştırmadan tek bakışta görürsün.
 
 [![CI](https://github.com/bugraskl/claude-code-office/actions/workflows/ci.yml/badge.svg)](https://github.com/bugraskl/claude-code-office/actions/workflows/ci.yml)
-[![Lisans: MIT](https://img.shields.io/badge/lisans-MIT-3b5bdb.svg)](LICENSE)
+[![Lisans: MIT](https://img.shields.io/badge/lisans-MIT-3b5bdb.svg)](https://github.com/bugraskl/claude-code-office/blob/main/LICENSE)
+[![npm](https://img.shields.io/npm/v/claude-code-office.svg?color=3b5bdb)](https://www.npmjs.com/package/claude-code-office)
 ![Node 18+](https://img.shields.io/badge/node-%E2%89%A518-34d399.svg)
 
-[English](README.md) · **Türkçe**
+[English](https://github.com/bugraskl/claude-code-office/blob/main/README.md) · **Türkçe**
 
-<img src="docs/room-tr.png" alt="Claude Code Office Türkçe arayüz" width="100%">
+<img src="https://raw.githubusercontent.com/bugraskl/claude-code-office/main/docs/room-tr.png" alt="Claude Code Office Türkçe arayüz" width="100%">
 
 </div>
 
@@ -22,7 +23,7 @@ Kim yazıyor, kim düşünüyor, kim seni bekliyor, kim takıldı; terminalleri 
 Node.js 18 veya üstü ve bu bilgisayarda en az bir Claude Code oturumu yeterli.
 
 ```bash
-npx github:bugraskl/claude-code-office
+npx claude-code-office
 ```
 
 Ofis **http://127.0.0.1:4777** adresinde açılır ve iki saniyede bir güncellenir. İkinci ekranda açık bırakabilirsin.
@@ -30,7 +31,7 @@ Ofis **http://127.0.0.1:4777** adresinde açılır ve iki saniyede bir güncelle
 Önce kendi oturumların olmadan denemek istersen:
 
 ```bash
-npx github:bugraskl/claude-code-office --demo
+npx claude-code-office --demo
 ```
 
 Arayüz dili tarayıcı diline göre seçilir; sağ üstten EN / TR arasında geçebilirsin.
@@ -65,13 +66,13 @@ Arayüz dili tarayıcı diline göre seçilir; sağ üstten EN / TR arasında ge
 Uzak bir makinedeki ajanları izlemek için SSH tüneli kullanabilirsin:
 
 ```bash
-ssh -L 4777:127.0.0.1:4777 sen@sunucu 'npx github:bugraskl/claude-code-office --no-open'
+ssh -L 4777:127.0.0.1:4777 sen@sunucu 'npx claude-code-office --no-open'
 ```
 
 ## Nasıl çalışır, gizlilik
 
-Claude Code her oturumu `~/.claude/projects/` altında JSON Lines dosyalarına yazar. Küçük bir Node sunucusu bu dosyaları yalnız okur. Her dosyada en son kaldığı bayttan devam eder ve durumu son olaylardan çıkarır. Hiçbir şeyi yazmaz, göndermez, yüklemez. Varsayılan olarak yalnız `127.0.0.1`'e bağlanır. Ayrıntılar [İngilizce README](README.md#how-it-works)'de.
+Claude Code her oturumu `~/.claude/projects/` altında JSON Lines dosyalarına yazar. Küçük bir Node sunucusu bu dosyaları yalnız okur. Her dosyada en son kaldığı bayttan devam eder ve durumu son olaylardan çıkarır. Hiçbir şeyi yazmaz, göndermez, yüklemez. Varsayılan olarak yalnız `127.0.0.1`'e bağlanır. Ayrıntılar [İngilizce README](https://github.com/bugraskl/claude-code-office/blob/main/README.md#how-it-works)'de.
 
 ## Lisans
 
-[MIT](LICENSE). Bu bir topluluk projesidir; Anthropic ile bağlantılı değildir ve Anthropic tarafından onaylanmamıştır.
+[MIT](https://github.com/bugraskl/claude-code-office/blob/main/LICENSE). Bu bir topluluk projesidir; Anthropic ile bağlantılı değildir ve Anthropic tarafından onaylanmamıştır.
