@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Code Office</title>
+<meta name="description" content="A live 3D office for your Claude Code sessions and subagents.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div id="scene"></div>
+
+<header id="topbar">
+  <div class="brand"><span class="logo">◆</span> <span data-i18n="title">Claude Code Office</span><span id="demoBadge" hidden></span></div>
+  <div id="counters"></div>
+  <div class="controls">
+    <label><span data-i18n="window">Window</span>
+      <select id="hours">
+        <option value="1" data-i18n="h1">1 hour</option>
+        <option value="3" data-i18n="h3" selected>3 hours</option>
+        <option value="12" data-i18n="h12">12 hours</option>
+        <option value="48" data-i18n="h48">2 days</option>
+      </select>
+    </label>
+    <label class="check"><input type="checkbox" id="showDone" checked> <span data-i18n="showDone">Finished</span></label>
+    <select id="lang" aria-label="Language">
+      <option value="en">EN</option>
+      <option value="tr">TR</option>
+    </select>
+    <span id="conn" class="dot"></span>
+  </div>
+</header>
+
+<aside id="sidebar">
+  <div class="heading" data-i18n="sessions">Sessions</div>
+  <div id="sessionList"></div>
+  <div id="legend" class="legend"></div>
+</aside>
+
+<aside id="details" hidden>
+  <button id="close" aria-label="Close">×</button>
+  <div id="detailsBody"></div>
+</aside>
+
+<div id="empty" hidden>
+  <div data-i18n="empty">No active sessions in this window.</div>
+  <small data-i18n="emptyHint"></small>
+</div>
+<div id="help" data-i18n="help"></div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>

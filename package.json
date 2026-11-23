@@ -1,0 +1,47 @@
+{
+  "name": "claude-code-office",
+  "version": "0.1.0",
+  "description": "A live 3D office for your Claude Code sessions: every session is a room, every subagent is a coworker at a desk.",
+  "keywords": [
+    "claude-code",
+    "claude",
+    "anthropic",
+    "ai-agents",
+    "subagents",
+    "multi-agent",
+    "agent-observability",
+    "dashboard",
+    "monitoring",
+    "visualization",
+    "threejs",
+    "webgl",
+    "3d",
+    "developer-tools",
+    "cli"
+  ],
+  "homepage": "https://github.com/bugraskl/claude-code-office#readme",
+  "bugs": "https://github.com/bugraskl/claude-code-office/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bugraskl/claude-code-office.git"
+  },
+  "license": "MIT",
+  "author": "bugraskl",
+  "bin": {
+    "claude-code-office": "bin/claude-code-office.js"
+  },
+  "main": "src/transcripts.js",
+  "files": [
+    "bin",
+    "src",
+    "public"
+  ],
+  "scripts": {
+    "start": "node bin/claude-code-office.js",
+    "demo": "node bin/claude-code-office.js --demo",
+    "test": "node --test test/transcripts.test.js test/server.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
